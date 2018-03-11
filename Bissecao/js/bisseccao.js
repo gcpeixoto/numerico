@@ -40,9 +40,9 @@ function bissecao(stringExpression, limInf, limSup, maxInterations, tolerancia) 
         //Substitui X pelo limite Inferior
         const fInferior = parsedExpression.evaluate({x: limInf});
 
-        //Se sinal da funcao aplicada no ponto medio for igual a funcao aplicada no limite Inferior
-        //então, o ponto medio sera o novo limite inferior,
-        //caso contrário, o ponto medio sera o novo limite superior
+        //Se sinal da funcao aplicada no ponto medio for igual a sinal da funcao aplicada no limite Inferior
+        //então, o ponto medio sera o novo limite inferior, (pois a raiz estara no lado esquerdo)
+        //caso contrário, o ponto medio sera o novo limite superior (pois a raiz estara no lado direito)
         Math.sign(fMedia) === Math.sign(fInferior) ? limInf = pontoMedio : limSup = pontoMedio;
 
         //Chama recursividade com os novos limites inferiores e superiores
