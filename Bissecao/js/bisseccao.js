@@ -38,7 +38,7 @@ function bissecao(stringExpression, limInf, limSup, maxInterations, tolerancia) 
     if (--maxInterations > 0) {
 
         //Substitui X pelo limite Inferior
-        const fInferior = Math.sign(parsedExpression.evaluate({x: limInf}));
+        const fInferior = parsedExpression.evaluate({x: limInf});
 
         //Se sinal da funcao aplicada no ponto medio for igual a funcao aplicada no limite Inferior
         //então, o ponto medio sera o novo limite inferior,
