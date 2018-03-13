@@ -37,4 +37,6 @@ app.controller('numericoController', ['$scope', 'Restangular', function ($scope,
         }
     };
 
+    $('.mdb-select').material_select();
+
 }]);

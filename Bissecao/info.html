@@ -20,6 +20,13 @@
     </div>
     <div class="col-md-6 text-center">
         <h3>Gráficos</h3>
+        <select class="mdb-select">
+            <option value="" disabled selected>Escolha a interação</option>
+
+            <option value="1">Interação 1</option>
+            <option value="2">Interação 2</option>
+            <option value="3">Interação 3</option>
+        </select>
         <canvas id="line" class="chart chart-line" chart-data="data"
                 chart-labels="labels" chart-series="series" chart-options="options"
                 chart-dataset-override="datasetOverride" chart-click="onClick">
