@@ -1,4 +1,31 @@
-const exprVal = require('expr-eval/index');
+let exprVal = require('expr-eval');
+
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+    loadBissecao();
+    return false;
+}
+
+let form = document.getElementById('formBiss');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
+
+function loadBissecao() {
+    console.log("loadBiss");
+
+    let stringExpression = document.getElementById("stringExpression");
+    let limInf = document.getElementById("limInf");
+    let limSup = document.getElementById("limSup");
+    let maxInterations = document.getElementById("maxInterations");
+    let tolerancia = document.getElementById("tolerancia");
+
+    let response = bissecao(stringExpression, limInf, limSup, maxInterations, tolerancia);
+    console.log("rene eh viado: " + response);
+}
 
 /**
  * Calcula uma interação da bissecao, OBS: método recurssivo
@@ -20,10 +47,10 @@ function bissecao(stringExpression, limInf, limSup, maxInterations, tolerancia) 
     const fMedia = parsedExpression.evaluate({x: pontoMedio});
 
     console.log("------------------------");
-    console.log("Limite Inferior: "+limInf);
-    console.log("Ponto Medio: "+ pontoMedio);
-    console.log("Limite Superior: "+limSup);
-    console.log("F(PontoMedio): "+fMedia);
+    console.log("Limite Inferior: " + limInf);
+    console.log("Ponto Medio: " + pontoMedio);
+    console.log("Limite Superior: " + limSup);
+    console.log("F(PontoMedio): " + fMedia);
     console.log("------------------------");
     //Plota a expressão aqui (ou não)
 
