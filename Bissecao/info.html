@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-6 text-center">
+        <h3>Bisseção</h3>
+        <form id="formBiss">
+            <div class="md-form w-50 center-items">
+                String Expression:
+                <input class="form-control" type="text" id="stringExpression" value="x^2">
+                Limite Inferior:
+                <input class="form-control" type="number" id="limInf" value="-1">
+                Limite Superior:
+                <input class="form-control" type="number" id="limSup" value="1">
+                Iterações Maximas:
+                <input class="form-control" type="number" id="maxInterations" value="30">
+                Tolerancia:
+                <input class="form-control" type="number" id="tolerancia" value="0.001">
+                <button type="button" class="btn btn-info">Rodar</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-6 text-center">
+        <h3>Gráficos</h3>
+        <canvas id="line" class="chart chart-line" chart-data="data"
+                chart-labels="labels" chart-series="series" chart-options="options"
+                chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+    </div>
+</div>
