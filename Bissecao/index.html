@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Bisseção</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body>
-<h1>Bisseção</h1>
-<form id="formBiss">
-    String Expression:<br>
-    <input type="text" id="stringExpression" value="x^2"><br>
-    Limite Inferior:<br>
-    <input type="number" id="limInf" value="-1"><br>
-    Limite Superior:<br>
-    <input type="number" id="limSup" value="1"><br>
-    Iterações Maximas:<br>
-    <input type="number" id="maxInterations" value="30"><br>
-    Tolerancia:<br>
-    <input type="number" id="tolerancia" value="0.001"><br><br>
-    <button type="submit">Rodar</button>
-</form>
+
+<nav class="navbar special-color ">
+    <h5 class="text-white mt-1"> PROJETO CÁLCULO NUMÉRICO</h5>
+</nav>
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col text-center">
+            <h3>Bisseção</h3>
+            <form id="formBiss">
+                <div class="md-form w-25 center-items">
+                    String Expression:
+                    <input class="form-control" type="text" id="stringExpression" value="x^2">
+                    Limite Inferior:
+                    <input class="form-control" type="number" id="limInf" value="-1">
+                    Limite Superior:
+                    <input class="form-control" type="number" id="limSup" value="1">
+                    Iterações Maximas:
+                    <input class="form-control" type="number" id="maxInterations" value="30">
+                    Tolerancia:
+                    <input class="form-control" type="number" id="tolerancia" value="0.001">
+                    <button type="button" class="btn btn-info">Rodar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
 <script src="bundle.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
