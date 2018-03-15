@@ -46,9 +46,9 @@ app.controller('numericoController', ['$scope', 'Restangular', function ($scope,
             $scope.data = [
                 response.response.graphs[$scope.content.interation].y
             ];
-            toastr.success('Teste', 'Sucesso');
+            toastr.success('Função: '+$scope.content.stringExpression, 'Sucesso');
         }, function () {
-            toastr.error('Teste', 'Erro');
+            toastr.error('Problema com o servidor!', 'Erro');
         });
     };
 
