@@ -7,7 +7,7 @@
 
 let app = angular.module('numerico', ['ngRoute', 'chart.js', 'restangular']);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
 
     $routeProvider
         .when('/', {
@@ -17,4 +17,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         .otherwise({
             redirectTo: '/'
         });
+
+        RestangularProvider.setBaseUrl('http://150.165.138.215:8080/bissecao');
 }]);

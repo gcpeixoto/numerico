@@ -1,32 +1,35 @@
 <div class="row">
-    <div class="col-md-6 text-center">
+    <div class="col text-center">
         <h3>Bisseção</h3>
         <form id="formBiss">
             <div class="md-form w-50 center-items">
                 String Expression:
-                <input class="form-control" type="text" id="stringExpression" value="x^2">
+                <input class="form-control" type="text" ng-model="content.stringExpression" value="x^2">
                 Limite Inferior:
-                <input class="form-control" type="number" id="limInf" value="-1">
+                <input class="form-control" type="number" ng-model="content.limInf" value="-1">
                 Limite Superior:
-                <input class="form-control" type="number" id="limSup" value="1">
+                <input class="form-control" type="number" ng-model="content.limSup" value="1">
                 Iterações Maximas:
-                <input class="form-control" type="number" id="maxInterations" value="30">
+                <input class="form-control" type="number" ng-model="content.maxInterations" value="30">
                 Tolerancia:
-                <input class="form-control" type="number" id="tolerancia" value="0.001">
-                <button type="button" class="btn btn-info">Rodar</button>
+                <input class="form-control" type="number" ng-model="content.tolerancia" value="0.001">
+                <button type="button" ng-click="bicessao()" class="btn btn-info">Rodar</button>
             </div>
 
         </form>
     </div>
-    <div class="col-md-6 text-center">
+    <div class="col-md-6 text-center pr-3" ng-if="graph">
         <h3>Gráficos</h3>
-        <select class="mdb-select">
-            <option value="" disabled selected>Escolha a interação</option>
 
-            <option value="1">Interação 1</option>
-            <option value="2">Interação 2</option>
-            <option value="3">Interação 3</option>
-        </select>
+        <label>Modifique as iterações:</label>
+        <form class="range-field">
+            <input type="range" min="0"max="{{maxInteration}}" ng-change="changeInteration()" ng-model="content.interation"/>
+        </form>
+        <label class="text-warning">Função: <strong>{{content.stringExpression}}</strong></label>
+        <label class="text-info">Raiz: <strong>{{content.raiz}}</strong></label>
+        <br>
+        <label>Iteração:: <strong>{{content.interation}}</strong></label>
+        <label>Intervalo: [<strong>{{content.limiteInferior}}</strong>,<strong>{{content.limiteSuperior}}</strong>]</label>
         <canvas id="line" class="chart chart-line" chart-data="data"
                 chart-labels="labels" chart-series="series" chart-options="options"
                 chart-dataset-override="datasetOverride" chart-click="onClick">
