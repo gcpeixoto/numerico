@@ -18,5 +18,5 @@ app.config(['$routeProvider', 'RestangularProvider', function ($routeProvider, R
             redirectTo: '/'
         });
 
-        RestangularProvider.setBaseUrl('http://150.165.138.215:8080/bissecao');
+        RestangularProvider.setBaseUrl('https://fierce-falls-84562.herokuapp.com/bissecao');
 }]);
