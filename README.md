@@ -12,4 +12,7 @@
 
 ## Etapa 2
 
+* [Tarefa 1 - ELIM. COMPACTA](https://github.com/AraujoJordan/numerico/tree/master/clipping-gauss-compacto);
+
+
 ## Etapa 3

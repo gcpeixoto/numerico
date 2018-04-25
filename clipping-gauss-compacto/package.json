@@ -1,0 +1,24 @@
+{
+  "name": "clipping-gauss-compacto",
+  "version": "1.0.0",
+  "description": "Etapa 2 do projeto Numbioses",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AraujoJordan/numerico.git"
+  },
+  "keywords": [
+    "numeric",
+    "calculus",
+    "matrix"
+  ],
+  "author": "Jordan Lira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AraujoJordan/numerico/issues"
+  },
+  "homepage": "https://github.com/AraujoJordan/numerico#readme"
+}
