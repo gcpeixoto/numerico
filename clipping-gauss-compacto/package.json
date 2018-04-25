@@ -2,9 +2,10 @@
   "name": "clipping-gauss-compacto",
   "version": "1.0.0",
   "description": "Etapa 2 do projeto Numbioses",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/AraujoJordan/numerico/issues"
   },
-  "homepage": "https://github.com/AraujoJordan/numerico#readme"
+  "homepage": "https://github.com/AraujoJordan/numerico#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mathjs": "^4.0.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4"
+  }
 }
