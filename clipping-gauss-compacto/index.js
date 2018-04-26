@@ -1,6 +1,6 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
-    // bissecao = require('./bissecao.js'),
+    bissecao = require('./bissecao.js'),
     eliminacaolu = require('./eliminacaolu.js');
 var cors = require('cors');
 
@@ -14,23 +14,23 @@ app.get('/', function (req, res) {
     res.status(200).send('API de Numericos.')
 });
 
-// app.post('/bissecao/', function (req, res) {
-//     if (!req.body || req.body.length === 0) {
-//         console.log('request body not found');
-//         return res.sendStatus(400);
-//     }
-//     console.log(JSON.stringify(req.body));
-//     // res.header(200, {'Access-Control-Allow-Origin': '*'});
-//     res.json({
-//         response: bissecao.bissecao(
-//             req.body.stringExpression,
-//             parseFloat(req.body.limInf),
-//             parseFloat(req.body.limSup),
-//             parseInt(req.body.maxInterations),
-//             parseFloat(req.body.tolerancia),
-//             {graphs: []})
-//     })
-// });
+app.post('/bissecao/', function (req, res) {
+    if (!req.body || req.body.length === 0) {
+        console.log('request body not found');
+        return res.sendStatus(400);
+    }
+    console.log(JSON.stringify(req.body));
+    // res.header(200, {'Access-Control-Allow-Origin': '*'});
+    res.json({
+        response: bissecao.bissecao(
+            req.body.stringExpression,
+            parseFloat(req.body.limInf),
+            parseFloat(req.body.limSup),
+            parseInt(req.body.maxInterations),
+            parseFloat(req.body.tolerancia),
+            {graphs: []})
+    })
+});
 
 /**
  * Entrada:
@@ -56,7 +56,7 @@ app.post('/eliminacaolu/', function (req, res) {
     }
     // console.log(JSON.stringify(req.body));
     res.json({
-        response: eliminacaolu.eliminacaolu(req.body.stringMatrix)
+        response: eliminacaolu.eliminacaolu2(req.body.stringMatrix)
     })
 });
 
